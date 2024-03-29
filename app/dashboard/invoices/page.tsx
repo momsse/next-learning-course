@@ -6,9 +6,15 @@ import { lusitana } from '@/app/ui/fonts';
 import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 import { Suspense } from 'react';
 import { fetchInvoicesPages } from '@/app/lib/data';
+import { Metadata } from 'next';
 
 // FIXME Seems to be needed to make revalidatePath working
 export const dynamic = 'auto';
+
+export const metadata: Metadata = {
+  title: 'Invoices',
+  keywords: 'invoices, payments, billing',
+};
 
 export default async function Page({
   searchParams,
